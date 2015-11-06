@@ -2,15 +2,15 @@ class CreateTables < ActiveRecord:: Migration
   
   def change
     create_table :users do |t|
-      t.string :username
+      t.string :user_name
       t.string :email
       t.string :password 
       t.timestamps
     end
 
     create_table :contacts do |t|
-      t.string  :firstname 
-      t.string  :lastname 
+      t.string  :first_name 
+      t.string  :last_name 
       t.string  :email 
       t.string  :company 
       t.string  :source 
@@ -18,10 +18,10 @@ class CreateTables < ActiveRecord:: Migration
     end
 
     create_table :pages do |t|
-      t.string  :pagename
-      t.string  :pageurl
-      t.string  :pageid 
-      t.string  :pagevisitorcount 
+      t.string  :page_name
+      t.string  :page_url
+      t.string  :page_id 
+      t.string  :page_visitor_count 
       t.timestamps
     end
 

@@ -11,29 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 1) do
+ActiveRecord::Schema.define(version: 2) do
 
   create_table "contacts", force: :cascade do |t|
-    t.string   "firstname"
-    t.string   "lastname"
+    t.string   "first_name"
+    t.string   "last_name"
     t.string   "email"
     t.string   "company"
     t.string   "source"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "page_id"
   end
 
   create_table "pages", force: :cascade do |t|
-    t.string   "pagename"
-    t.string   "pageurl"
-    t.string   "pageid"
-    t.string   "pagevisitorcount"
+    t.string   "page_name"
+    t.string   "page_url"
+    t.string   "page_id"
+    t.string   "page_visitor_count"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "username"
+    t.string   "user_name"
     t.string   "email"
     t.string   "password"
     t.datetime "created_at"
