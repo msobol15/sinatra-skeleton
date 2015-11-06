@@ -1,4 +1,6 @@
 class Page < ActiveRecord::Base
+
+  has_many  :contacts
   
   attr_accessor :page_name, :page_url, :page_id, :page_visitor_count
 

@@ -1,4 +1,6 @@
 class Contact < ActiveRecord::Base
+
+  belongs_to  :page
   
   attr_accessor :first_name, :last_name, :email, :company, :source
 
