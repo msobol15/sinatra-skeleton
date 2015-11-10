@@ -1,0 +1,17 @@
+.container {
+  background-color: #474B5F;
+  display: inline-block;
+  float: left;
+  margin: 30px;
+  padding: 30px;
+  border-radius: 10px;
+  font-family: Ubuntu;
+  color: #FF5930;
+  width: 300px;
+}
+
+.btn {
+  background-color: #FF5930;
+  border: none;
+  color: #FFFFFF;
+}
