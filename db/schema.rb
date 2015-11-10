@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2) do
+ActiveRecord::Schema.define(version: 4) do
 
   create_table "contacts", force: :cascade do |t|
     t.string   "first_name"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 2) do
   create_table "pages", force: :cascade do |t|
     t.string   "page_name"
     t.string   "page_url"
-    t.string   "page_id"
+    t.integer  "unbounce_page_id"
     t.string   "page_visitor_count"
     t.datetime "created_at"
     t.datetime "updated_at"
