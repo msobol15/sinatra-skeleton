@@ -10,3 +10,19 @@ end
 get '/signup' do
   erb :signup
 end
+
+get 'profile' do
+  erb :profile
+end
+
+post '/login' do
+  redirect '/'
+end
+
+post 'signup' do 
+  redirect '/'
+end
+
+post 'signup' do
+  redirect '/'
+end
