@@ -3,7 +3,8 @@ helpers do
 
   def current_user
     @current_user = User.find_by(id: session[:user_id]) if session[:user_id]
-end
+  end
+end 
 
 get '/' do
   erb :index
@@ -22,10 +23,10 @@ get 'profile' do
 end
 
 post '/login' do
-  username = params[:username]
+  username = params[:user_name]
   password = params[:password]
 
-  user = User.find_by(username: username)
+  user = User.find_by(user_name: username)
   if user.password == password
     session[:user_id] = user.id
     redirect '/'
@@ -34,20 +35,17 @@ post '/login' do
   end
 end
 
-post 'signup' do 
-  username = params[:username]
+post '/signup' do 
+  username = params[:user_name]
+  email = params[:email]
   password = params[:password]
 
-  user = User.find_by(username: username)
+  user = User.find_by(user_name: username)
   if user
     redirect 'signup'
   else 
-    user = User.create(username: username, password: password)
+    user = User.create(user_name: username, email: email, password: password)
     session[:user_id] = user.id
     redirect '/'
   end
-ends
-
-post 'signup' do
-  redirect '/'
 end

@@ -3,18 +3,18 @@
       <div class=".col-md-4">
         <form method="POST" action="/signup">
           <div class="form-group">
-            <label for="SignUpFirstName">First Name</label>
-            <input type="text" class="form-control" id="SignUpFirstName" placeholder="First Name">
-          </div>
-          <div class="form-group">
-            <label for="SignUpLastName">Last Name</label>
-            <input type="text" class="form-control" id="SignUpLastName" placeholder="Last Name">
+            <label for="SignUpFirstName">Full Name</label>
+            <input type="text" class="form-control" name="user_name" placeholder="Full Name">
           </div>
           <div class="form-group">
             <label for="SignUpEmail">Email</label>
-            <input type="text" class="form-control" id="SignUpEmail" placeholder="Email">
+            <input type="text" class="form-control" name="SignUpEmail" placeholder="Email">
           </div>
           <div class="form-group">
+            <label for="Password">Password</label>
+            <input type="password" class="form-control" name="Password" placeholder="Create Password"> 
+          </div>
+        <!--   <div class="form-group">
             <label>Country</label>
             <select class="form-control">
               <option>Please Select</option>
@@ -22,7 +22,7 @@
               <option>USA</option>
               <option>Mexico</option>
             </select>
-          </div>
+          </div> -->
           <button type="submit" class="btn btn-default btn-block">Sign Up</button>
         </form>
       </div>
